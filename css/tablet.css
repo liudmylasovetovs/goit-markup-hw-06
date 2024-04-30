@@ -1,0 +1,23 @@
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+  .features-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+  }
+  .features-list-li {
+    width: calc((100% - 24px) / 2);
+  }
+  .features-list-title{
+    text-align: left;
+  }
+
+.team-list{
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 64px 24px;
+    justify-content: center;
+}
+}
