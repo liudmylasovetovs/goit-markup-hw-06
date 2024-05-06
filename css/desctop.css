@@ -30,6 +30,7 @@
   }
   .hero-title {
     margin-bottom: 48px;
+   
   }
   .section-features {
     padding: 120px 0;
@@ -110,6 +111,7 @@
     justify-content: center;
     gap: 0;
     padding-left: 0;
+    width: 1158px;
   }
   .footer {
     padding: 100px 0;

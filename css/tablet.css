@@ -78,7 +78,7 @@
       url(../image/hero/Dark-bgtab1x.jpg);
   }
   .hero-title {
-    width: 496px;
+    max-width: 496px;
     font-size: 56px;
     line-height: 1.07143;
     letter-spacing: 1.12px;
