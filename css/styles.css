@@ -49,23 +49,14 @@ h4 {
 }
 img {
   display: block;
-  max-width: 100vh;
+  max-width: 100%;
   height: auto;
-}
-.hero,
-.section-work,
-.section-team {
-padding: 120px 0;
 }
 .container {
   padding: 0 16px;
   margin: 0 auto;
   max-width: 428px;
 }
-
-
-  
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -81,6 +72,7 @@ padding: 120px 0;
 header .container {
   display: flex;
   align-items: center;
+  padding: 24px 16px;
 }
 .link-logo {
   color: var(--color-primary-brand);
@@ -90,82 +82,38 @@ header .container {
   line-height: 1.16667;
   letter-spacing: 0.54px;
   text-transform: uppercase;
-}
+  }
 .logo-part {
   color: var(--color-dark);
 }
-.nav-list {
-  display: flex;
-  align-items: center;
-  margin-left: 76px;
-}
-.nav-list-link {
-  position: relative;
-  color: var(--color-dark);
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.32px;
-  padding: 24px 0;
-  display: block;
-}
-.nav-list-link:hover,
-.nav-list-link:focus {
-  color: var(--color-pressed-states);
-  transition: var(--trans);
-}
-.current {
-  color: var(--color-pressed-states);
-}
-.nav-list-link::after {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: transparent;
-}
-.nav-list-link.current::after {
-  background-color: var(--color-pressed-states);
-}
 .nav-list,
 .contacts-list {
-  gap: 40px;
-}
-.contacts-list {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-.contacts-list-link {
-  color: var(--color-text);
-  font-family: inherit;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.32px;
-}
-.contacts-list-link:hover,
-.contacts-list-link:focus {
-  color: var(--color-pressed-states);
-  transition: var(--trans);
+  display: none;
 }
 .hero {
-  max-width: 1440px;
+  max-width: 428px;
   margin: 0 auto;
   background-color: var(--color-dark);
-  padding: 188px 0;
+  padding: 112px 0;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../image/people-office.jpg);
+    url(../image/hero/Dark-bgmob1x.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+@media screen and (min-width: 428px) and (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../image/hero/Dark-bgmob2x.jpg);
+  }
+ 
+  
 }
 .hero .container {
   display: flex;
@@ -174,15 +122,13 @@ header .container {
 }
 .hero-title {
   color: var(--color-white-background);
-  display: flex;
-  text-align: center;
-  width: 496px;
+  width: 320px;
   font-family: inherit;
-  font-size: 56px;
+  font-size: 36px;
   font-weight: 700;
-  line-height: 1.07143;
-  letter-spacing: 1.12px;
-  margin-bottom: 48px;
+  line-height: 1.11111;
+  letter-spacing: 0.72px;
+  margin-bottom: 72px;
 }
 .hero-button {
   color: var(--color-white-background);
@@ -206,19 +152,16 @@ header .container {
 }
 .section-features {
   background-color: var(--color-white-background);
-padding: 96px 0;
+  padding: 96px 0;
 }
-
 .features-list {
   display: flex;
   flex-direction: column;
- gap: 72px;
+  gap: 72px;
 }
 .features-icons {
   display: none;
-
 }
-
 .features-list-title {
   color: var(--color-dark);
   font-family: inherit;
@@ -236,43 +179,17 @@ padding: 96px 0;
   line-height: 1.5;
   letter-spacing: 0.32px;
 }
-
-.section-work .container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.section-work {
-  background-color: var(--color-white-background);
-}
-.work-title {
-  color: var(--color-dark);
-  text-align: center;
-  font-family: inherit;
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 1.11111;
-  letter-spacing: 0.72px;
-  text-transform: capitalize;
-  margin-bottom: 72px;
-}
-.work-list {
-  display: flex;
-  gap: 24px;
-}
-.work-list-li {
-  width: calc((100% - 2 * 24px) / 3);
-  background-color: var(--color-white-background);
-}
 .section-team .container {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
+.section-work {
+  display: none;
+}
 .section-team {
   background-color: var(--color-light);
   padding: 96px 0;
-  
 }
 .social-team {
   display: flex;
@@ -294,7 +211,6 @@ padding: 96px 0;
   fill: var(--color-light);
   background-color: var(--color-primary-brand);
 }
-
 .social-list-link-team:hover,
 .social-list-link-team:focus {
   fill: var(--color-light);
@@ -312,7 +228,6 @@ padding: 96px 0;
 }
 .team-list-li {
   background-color: var(--color-white-background);
-
   box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 2px 1px 0px rgba(46, 47, 66, 0.08);
@@ -346,15 +261,12 @@ padding: 96px 0;
   line-height: 1.5;
   letter-spacing: 0.32px;
 }
-.section-customers .container {
+.section-customers {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-}
-.section-customers {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding: 96px 0;
   background-color: var(--color-white-background);
 }
 .customers-title {
@@ -370,11 +282,18 @@ padding: 96px 0;
 }
 .customers-list {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 72px 16px;
 }
-
+.customers-list-li {
+  width: calc((100% - 16px) / 2);
+}
+.customers-list-icons {
+  width: 110px;
+}
 .customers-list-link {
-  width: 168px;
+  width: 190px;
   height: 88px;
   display: flex;
   align-items: center;
@@ -391,17 +310,22 @@ padding: 96px 0;
   transition: var(--trans);
 }
 .footer {
-  padding: 100px 0;
+  padding: 96px 0;
   background-color: var(--color-dark);
 }
 .footer .container {
   display: flex;
-  justify-content: flex-start;
-   }
-   /* не розумію як встановити проміжки між елементами футера, бо гап загального контейнера футера ббув заданий 120 пікселей, але між соц-лінками і  формою 80 */
-.social-footer{
-  margin-left: 120px;
-  margin-right: 80px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 72px;
+}
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
 }
 .link-logo-footer {
   color: var(--color-primary-brand);
@@ -415,6 +339,7 @@ padding: 96px 0;
 .logo-part-footer {
   color: var(--color-light);
   display: inline-block;
+  text-align: center;
 }
 .text-footer {
   color: var(--color-light);
@@ -423,12 +348,12 @@ padding: 96px 0;
   line-height: 1.5;
   letter-spacing: 0.32px;
   width: 264px;
-  margin-top: 16px;
 }
 .text-social-footer {
   color: var(--color-light);
   font-family: inherit;
   font-size: 16px;
+  text-align: center;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.32px;
@@ -458,10 +383,76 @@ padding: 96px 0;
   width: 40px;
   height: 40px;
 }
-
+.footer-subscribe-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.subscribe-label {
+  color: var(--color-light);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.e-mail-input {
+  width: 398px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid var(--color-white-background);
+  background-color: var(--color-hero-background);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  color: var(--color-white-background);
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.48px;
+  margin-top: 16px;
+}
+.subscribe-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background-color: var(--color-primary-brand);
+  padding: 8px 24px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  border: none;
+  width: 165px;
+  height: 40px;
+}
+.subscribe-button:hover,
+.subscribe-button:focus {
+  color: var(--color-white-background);
+  background-color: var(--color-pressed-states);
+  transition: var(--trans);
+}
+.subscribe-button-text {
+  color: var(--color-white-background);
+  text-align: center;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.64px;
+}
+.subscribe-icon {
+  fill: var(--color-white-background);
+}
+.footer-subscribe-button {
+  display: flex;
+  align-items: center;
+  padding-top: 16px;
+}
 .section-portfolio-buttons {
-  padding-top: 96px;
-  padding-bottom: 120px;
+  padding-top: 48px;
+  padding-bottom: 48px;
 }
 .button {
   color: var(--color-primary-brand);
@@ -478,18 +469,15 @@ padding: 96px 0;
 }
 .buttons-list {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   gap: 24px;
-  margin-bottom: 72px;
-}
-.button-list-li {
-  width: calc((100% - 4 * 24px) / 5);
+  margin-bottom: 48px;
 }
 .button:hover,
 .button:focus {
   color: var(--color-white-background);
   background-color: var(--color-pressed-states);
-  transition: var(--trans); 
+  transition: var(--trans);
 }
 .button:active {
   background-color: var(--color-pressed-states);
@@ -501,13 +489,9 @@ padding: 96px 0;
 }
 .portfolio-list {
   display: flex;
-  flex-wrap: wrap;
-  align-content: stretch;
-  gap: 24px;
-  row-gap: 48px;
-}
-.portfolio-list-li {
-  width: calc((100% - 2 * 24px) / 3);
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
 }
 .portfolio-list-title {
   color: var(--color-dark);
@@ -527,13 +511,13 @@ padding: 96px 0;
   letter-spacing: 0.32px;
 }
 .portfolio-list-li:hover,
-.portfolio-list-li:focus{           
+.portfolio-list-li:focus {
   color: var(--color-pressed-states);
   box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 2px 1px 0px rgba(46, 47, 66, 0.08);
   transition: var(--trans);
-} 
+}
 .portfolio-list-text {
   color: var(--color-text);
   text-align: left;
@@ -567,14 +551,11 @@ padding: 96px 0;
   line-height: 1.5;
   letter-spacing: 0.32px;
   /* виправити на не прозорий */
-  background-color: rgb(77, 90, 229, 0.9); 
+  background-color: rgb(77, 90, 229, 0.9);
   /* background-color: var(--color-primary-brand); */
 }
 .portfolio-list-link:hover .overlay,
 .portfolio-list-link:focus .overlay {
-  transform: translateY(0); 
-  transition: transform 300ms;  
+  transform: translateY(0);
+  transition: transform 300ms;
 }
-
-
-
